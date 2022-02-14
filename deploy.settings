@@ -1,0 +1,6 @@
+version = 0.0.1
+groupId = Mss
+artifactId = MssApplicationAuth-client
+licenses = ['Apache 2'] // or something else 
+id = MssApplicationAuth
+gitUrl = https://github.com/mtschach/MssApplicationAuth
