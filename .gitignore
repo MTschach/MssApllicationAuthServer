@@ -1,0 +1,16 @@
+/.gradle/
+/.settings/
+/client/gen/
+/client/bin/
+/client/build/
+/client/.classpath
+/client/.project
+/client/.settings/
+/server/gen/
+/server/bin/
+/server/build/
+/server/.classpath
+/server/.project
+/server/.settings/
+/.project
+/.classpath

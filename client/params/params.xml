@@ -1,0 +1,9 @@
+<classes>
+   <class name="CheckApplicationIdRequest" package="de.mss.applicationauth.client.param" extends="de.mss.net.webservice.WebServiceRequest" version="4932993201159541917">
+      <variable name="applicationId"         type="String"                                   initValue="null"     required="true"   annotation="@javax.ws.rs.PathParam (value = &quot;applicationId&quot;)" />
+   </class>
+   <class name="CheckApplicationIdResponse" package="de.mss.applicationauth.client.param" extends="de.mss.net.webservice.WebServiceResponse" version="3498560198265">
+      <variable name="sysUserId"             type="Integer"                                  initValue="null" />
+      <variable name="methodRights"          type="java.util.List&lt;String&gt;"             initValue="null" />
+   </class>
+</classes>
