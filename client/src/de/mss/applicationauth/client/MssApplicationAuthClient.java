@@ -2,9 +2,9 @@ package de.mss.applicationauth.client;
 
 import de.mss.applicationauth.client.param.CheckApplicationIdRequest;
 import de.mss.applicationauth.client.param.CheckApplicationIdResponse;
+import de.mss.applicationauth.enumeration.CallPaths;
 import de.mss.configtools.ConfigFile;
 import de.mss.net.client.ClientBase;
-import de.mss.net.rest.RestMethod;
 import de.mss.net.webservice.WebServiceJsonCaller;
 import de.mss.utils.exception.MssException;
 
@@ -41,8 +41,8 @@ public class MssApplicationAuthClient extends ClientBase {
             .call(
                   loggingId,
                   this.servers,
-                  PATH_PREFIX + "/{applicationId}",
-                  RestMethod.GET,
+                  PATH_PREFIX + CallPaths.CHECK_APPLICATION_ID.getPath(),
+                  CallPaths.CHECK_APPLICATION_ID.getMethod(),
                   request,
                   new CheckApplicationIdResponse(),
                   MAX_RETRIES);

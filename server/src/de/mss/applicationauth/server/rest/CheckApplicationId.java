@@ -2,6 +2,7 @@ package de.mss.applicationauth.server.rest;
 
 import de.mss.applicationauth.client.param.CheckApplicationIdRequest;
 import de.mss.applicationauth.client.param.CheckApplicationIdResponse;
+import de.mss.applicationauth.enumeration.CallPaths;
 import de.mss.applicationauth.server.ApplicationAuthServerWebService;
 import de.mss.applicationauth.server.call.CheckApplicationIdCall;
 import de.mss.net.rest.RestMethod;
@@ -19,13 +20,13 @@ public class CheckApplicationId extends ApplicationAuthServerWebService<CheckApp
 
    @Override
    public RestMethod getMethod() {
-      return RestMethod.POST;
+      return CallPaths.CHECK_APPLICATION_ID.getMethod();
    }
 
 
    @Override
    public String getPath() {
-      return "/{applicationId}";
+      return CallPaths.CHECK_APPLICATION_ID.getPath();
    }
 
 

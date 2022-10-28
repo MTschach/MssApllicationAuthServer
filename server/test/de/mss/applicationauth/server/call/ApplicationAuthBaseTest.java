@@ -1,5 +1,7 @@
 package de.mss.applicationauth.server.call;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +16,8 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
+import de.mss.applicationauth.enumeration.CallPaths;
+import de.mss.applicationauth.server.ApplicationAuthServerWebService;
 import de.mss.configtools.ConfigFile;
 import de.mss.db.migration.MssDbMigration;
 
@@ -59,6 +63,12 @@ public abstract class ApplicationAuthBaseTest {
    }
 
 
+   protected void checkRestCall(ApplicationAuthServerWebService<?, ?> restCall, CallPaths callPath) {
+      assertEquals(callPath.getMethod(), restCall.getMethod());
+      assertEquals(callPath.getPath(), restCall.getPath());
+   }
+
+
    protected String getLoggingId() {
       final Throwable th = new Throwable();
       return th.getStackTrace()[1].getMethodName() + "_" + System.currentTimeMillis();
@@ -66,13 +76,13 @@ public abstract class ApplicationAuthBaseTest {
 
 
    protected void replay() {
-
+      // nothing to do here
    }
 
 
    @BeforeEach
    public void setUp() throws Exception {
-
+      // nothing to do here
    }
 
 
@@ -83,6 +93,8 @@ public abstract class ApplicationAuthBaseTest {
 
 
    protected void verify() {
-
+      // nothing to do here
    }
+
+
 }

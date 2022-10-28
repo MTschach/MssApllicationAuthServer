@@ -18,3 +18,7 @@ include 'services:webservice'
 rootProject.name = 'MssApplicationAuth'
 include 'client'
 include 'server'
+
+project(":client").name = 'MssApplicationAuthClient'
+project(":server").name = 'MssApplicationAuthServer'
+
